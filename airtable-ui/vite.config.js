@@ -13,4 +13,11 @@ export default defineConfig({
     outDir: '../frontend',
     emptyOutDir: true,
   },
+  server: {
+    proxy: {
+      '/records': 'http://localhost:3000',
+      '/edit': 'http://localhost:3000',
+      '/update': 'http://localhost:3000'
+    },
+  },
 })
